@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Yu-Gi-Oh! Hobby</title>
+  <link rel="stylesheet" href="css/style_AWu969.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Yu-Gi-Oh! Hobby Site</h1>
+    <nav class ="box-nav">
+      <a class = "nav-box" href="Index.html">Home</a>
+      <a class = "nav-box" href="page2_AWu969.html">Gallery</a>
+      <a class = "nav-box" href="page3_AWu969.html">History & rules</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>Hi! I'm a big fan of Yu-Gi-Oh! — the card game, the anime, and the community. I’ve been collecting cards since I was a kid and love building decks, dueling friends, and keeping up with new sets.</p>
+    </section>
+
+    <section>
+      <h2>What You'll Find Here</h2>
+      <ul>
+        <li>A gallery of some of my favorite cards and decks</li>
+        <li>Rules of Yu-Gi-Oh</li>
+        <li>History of Yu-Gi-Oh </li>
+      </ul>
+    </section>
+  </main>
+  <section id="feedback">
+    <h2>Send Me Feedback</h2>
+    <form id="feedbackForm" action="https://formspree.io/f/xeoawkvv" method="POST">
+      <label for="fname">Your Name:</label>
+      <input type="text" id="fname" name="name" required>
+  
+      <br><label for="femail">Your Email:</label>
+      <input type="email" id="femail" name="_replyto" required>
+  
+      <br><label>rate this site</label>
+      <div class="rating">
+        <label>
+          <input type="checkbox" name="rating" value="1"> 1 - Poor
+        </label>
+        <label>
+          <input type="checkbox" name="rating" value="2"> 2 - Fair
+        </label>
+        <label>
+          <input type="checkbox" name="rating" value="3"> 3 - Good
+        </label>
+        <label>
+          <input type="checkbox" name="rating" value="4"> 4 - Very Good
+        </label>
+        <label>
+          <input type="checkbox" name="rating" value="5"> 5 - Excellent
+        </label>
+      </div>
+  
+      <label for="fmessage">Message:</label>
+      <textarea id="fmessage" name="message" rows="5" required></textarea>
+  
+      <button type="submit">Send Feedback</button>
+      <p id="formStatus"></p>
+    </form>
+  </section>
+  
+  <footer>
+  </footer>
+  <script src="script/script_AWu969.js"></script>
+
+</body>
+</html>

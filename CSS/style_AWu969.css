@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /* reset and base style */
+/*body (ln 7-13)*/
+body{
+    font-family:cursive;
+    background-color: lightblue;
+    color: black;
+    line-height: 1.6;
+    padding:  0 10px;
+}
+/*Header (ln 15-23)*/
+header{
+    background-color: lightcyan;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+header h1{
+    font-size: 2rem;
+}
+/*Main Content (ln 25-41)*/
+main{
+    max-width: 1000px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+section{
+    margin-bottom: 40px;
+}
+h2{
+    margin-bottom: 12px;
+    color: #3e2b61;
+    border-left: 5px solid #f1c40f;
+    padding-left: 10px;
+    display: flex;
+    flex-direction:column-reverse;
+}
+#feedback h2{
+    margin-bottom: 10px;
+}
+p, li{
+    margin-bottom: 9px;
+}
+/*Card hover text/Gallary (ln 43-77)*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    display: inline-block;
+}
+.card img {
+    width: 70px;
+    height: 100px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+.card:hover img {
+    transform: scale(1.05);
+}
+.card-effect {
+    display: none;
+    position:absolute;
+    bottom: 1;
+    left: 2;
+    width: 500%;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+    border-radius: 0 0 8px 8px;
+    box-sizing:content-box;
+}  
+.card:hover .card-effect {
+    display: block;
+}
+/*Box Navigation bar (ln 79-100)*/
+.box-nav{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+.nav-box{
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    font-weight: bold;
+    color: black;
+}
+.nav-box:hover{
+    color: rosybrown;
+    background-color: #57428f;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #f1c40f, 0 0 10px #f1c40f;
+}
+/*feedback (ln 102-117)*/
+.rating {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }  
+.rating label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: #2a1e3f;
+}  
+.rating input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+#feedback form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+/*Video Container (ln 119-127)*/
+.video-container{
+    text-align: center;
+}
+.video-container iframe{
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 9px;
+}
+.card-of-day{
+    position: relative;
+}
+.zoom-preview{
+    position: absolute;
+    display: none;
+    border-radius: 9px;
+}
+.card-of-day:hover .zoom-preview {
+    display: block;
+}
+@media(max-width: 1024px){
+    .gallery{
+        justify-content: center;
+    }
+    .nav-box{
+        font-size: 1rem;
+        padding: 13px 20px;
+    }
+    .card img, .card-thumb{
+        width: 100px;
+        height: auto;
+    }
+    .zoom-preview{
+        width: 250px;
+    
+    }
+   
+}
+@media(max-width: 768px){
+    .gallery{
+        justify-content: center;
+    }
+    .nav-box{
+        flex-direction: column;
+    }
+    .card img, .card-thumb{
+        width: 100px;
+        height: auto;
+    }
+    .zoom-preview{
+        width: 250px;
+    
+    }
+    header h1{
+        font-size: 1.3rem;
+    }
+    h2{
+        font-size: 1.3rem;
+    }
+    #feedback form{
+        width: 90%;
+    }
+}
+/*Theme styles Scrapped Idea (ignore)*/
+.theme-day {
+    background-color: #fdf9f0;
+    color: #2a1e3f;
+} 
+.theme-night {
+    background-color: #1a1a2e;
+    color: #f1f1f1;
+} 
+.theme-night header,.theme-night footer {
+    background-color: #111122;
+    border-color: #9b59b6;
+} 
+.theme-night .nav-box {
+    background-color: #2c2c3c;
+    color: #9b59b6;
+} 
+.theme-night .nav-box:hover {
+    background-color: #3c3c5c;
+    box-shadow: 0 0 20px #9b59b6, 0 0 10px #9b59b6;
+} 
+.theme-night h2 {
+    border-left-color: #9b59b6;
+} 
+.theme-night input,.theme-night textarea,.theme-night select {
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+} 
